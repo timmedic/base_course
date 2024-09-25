@@ -1,3 +1,4 @@
+print('What is your name?')
 name = str(input())
 print('Hello ' + name + "!")
 

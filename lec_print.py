@@ -1,1 +1,9 @@
-print('Hello chel, do you know, what is this?')
+print
+
+print ()
+
+print (3)
+
+print (3 + 4)
+
+print (3, 4)
