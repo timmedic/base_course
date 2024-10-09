@@ -6,23 +6,19 @@ isOlimp = False
 #yYear.split()
 for i in range(len(tYear) - 1, -1, -1):
     if tYear[i] == '.':
-        print(i, 'Dot')
         isOlimp = True
         i-=1
         continue
     elif isOlimp:
         tYearNums[0] += int(tYear[i]) * (10 ** (len(tYear) - (i+3)))
-        print(i, tYearNums[0])
     elif not isOlimp:
         tYearNums[1] = int(tYear[i])
-        print(i, tYearNums[1])
     else:
         print('Error: Stupid charecter in it')
 
-print(-780 + tYearNums[0] * 4 + tYearNums[1])
 gYear += (tYearNums[0] * 4) + tYearNums[1]
-print(gYear)
+
 if(gYear < 0):
-    print(f'{gYear * -1} до н.э.\nИли {gYear * -1 + 1}, если после Июля')
+    print(f'В Григорианском календаре эта дата - {gYear * -1} до н.э.\nИли {gYear * -1 + 1} до н.э., если после Июля')
 else:
-    print(f'{gYear} н.э.\nИли {gYear + 1}, если после Июля')
+    print(f'В Григорианском календаре эта дата - {gYear} н.э.\nИли {gYear + 1} н.э., если после Июля')
