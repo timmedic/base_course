@@ -6,4 +6,6 @@ def my_func(a, b):
 
 def my_func(a = 1, b = 0):
     x = 3 * a - b
-    ret
+    return x
+
+print(my_func)
