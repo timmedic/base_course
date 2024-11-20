@@ -2,13 +2,16 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def parabola(dX=5, N=1):
-    x = np.arange(-dX, dX+1, (dX*2) / N)
-    y = x**2
+    xm = np.arange(dX * (-1), -0.01, dX / N)
+    xp = np.arange(0.01, dX, dX / N)
+    ym = 0.5/xm
+    yp = 0.5/xp
 
-    plt.plot(x, y)
+    plt.plot(xm, ym)
+    plt.plot(xp, yp)
     plt.savefig('task_2.png')
 
 if(__name__ == '__main__'):
     dX = int(input('Введите предел изменения переменной x: '))
-    N = int(input('Введите количество точек, разбивающий параболу: '))
+    N = float(input('Введите количество точек, разбивающий параболу: '))
     parabola(dX, N)

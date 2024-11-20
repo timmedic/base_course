@@ -7,10 +7,10 @@ def circle_plotter(R=10):
     y = np.arange(-2*R, 2*R, 0.1)
 
     X, Y = np.meshgrid(x, y)
-
+    plt.plot(X, Y)
     fxy = X**2 + Y**2 - R**2
 
-    plt.contour(X, Y, fxy, levels=[0])
+    #plt.contour(X, Y, fxy, levels=[0, 10, 20])
     plt.axis('equal')
 
     plt.savefig('fig_4.png')
