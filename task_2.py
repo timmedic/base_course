@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def parabola(dX=5, N=1):
+def gyperbola(dX=5, N=1):
     xm = np.arange(dX * (-1), -0.01, dX / N)
     xp = np.arange(0.01, dX, dX / N)
     ym = 0.5/xm
@@ -13,5 +13,5 @@ def parabola(dX=5, N=1):
 
 if(__name__ == '__main__'):
     dX = int(input('Введите предел изменения переменной x: '))
-    N = float(input('Введите количество точек, разбивающий параболу: '))
-    parabola(dX, N)
+    N = float(input('Введите количество точек, разбивающий гиперболу: '))
+    gyperbola(dX, N)
