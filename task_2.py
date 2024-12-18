@@ -12,7 +12,7 @@ def CircleResize(time):
 fig, ax = plt.subplots()
 ball, = plt.plot([], [], 'o', color='r', label='Ball')
 
-frames = 360
+frames = 180
 coords = np.zeros((frames, 2))
 
 def Animate(i):
