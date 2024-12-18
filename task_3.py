@@ -42,5 +42,8 @@ if(__name__ == '__main__'):
         ani = FuncAnimation(fig, UpdateButterfly, frames=np.linspace(0, 12*np.pi, 1000), interval=30)
         ani.save('task_3_butterfly.gif', writer='pillow')
     elif(choice == 1):
+        edge = 30
+        ax.set_xlim(-edge, edge)
+        ax.set_ylim(-edge, edge)
         ani = FuncAnimation(fig, UpdateHeart, frames=np.linspace(0, 2*np.pi, 100), interval=30)
         ani.save('task_3_heart.gif', writer='pillow')
